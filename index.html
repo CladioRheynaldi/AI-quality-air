@@ -241,13 +241,13 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>🌳 Tree Prediction AI</h1>
+            <h1>Tree Prediction AI</h1>
             <p>Predict the number of trees needed to improve air quality in your city</p>
         </div>
 
         <div class="main-content">
             <div class="input-section">
-                <h3>🌍 City Air Quality Analysis</h3>
+                <h3>City Air Quality Analysis</h3>
                 <div style="display: flex; gap: 15px; align-items: end; margin-bottom: 20px;">
                     <div class="input-group" style="flex: 1;">
                         <label for="citySearch">Enter City Name</label>
@@ -263,10 +263,10 @@
             </div>
 
             <div class="input-section" id="manualInputSection" style="display: none;">
-                <h3>📊 Manual Air Quality & City Information</h3>
+                <h3>Manual Air Quality & City Information</h3>
                 <div style="text-align: center; margin-bottom: 15px;">
                     <button onclick="toggleManualInput()" class="calculate-btn" style="background: #6c757d;">
-                        📝 Use Manual Input Instead
+                    Use Manual Input Instead
                     </button>
                 </div>
                 
@@ -314,7 +314,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 20px;">
-                    <button onclick="calculateTreesManual()" class="calculate-btn">🌱 Calculate Trees Needed</button>
+                    <button onclick="calculateTreesManual()" class="calculate-btn">Calculate Trees Needed</button>
                 </div>
                 </div>
             </div>
@@ -322,7 +322,7 @@
             <div id="resultsSection" class="results-section">
                 <div class="results-grid">
                     <div class="result-card">
-                        <h3>🌳 Trees Required (Best Option)</h3>
+                        <h3>Trees Required (Best Option)</h3>
                         <div id="treeCount" class="tree-count">0</div>
                         <div id="aqiStatus" class="aqi-indicator">Calculating...</div>
                         <p style="text-align: center; color: #666; margin-top: 10px;">
@@ -331,13 +331,13 @@
                     </div>
 
                     <div class="result-card">
-                        <h3>🌲 All Species Ranked</h3>
+                        <h3>All Species Ranked</h3>
                         <ul id="speciesList" class="species-list">
                         </ul>
                     </div>
 
                     <div class="result-card">
-                        <h3>🌍 Calculation Details</h3>
+                        <h3>Calculation Details</h3>
                         <div id="impactMetrics">
                             <p><strong>Dominant Pollutant:</strong> <span id="dominantPollutant">-</span></p>
                             <p><strong>Total Pollution Load:</strong> <span id="totalLoad">0</span> grams/year</p>
@@ -351,7 +351,7 @@
                 </div>
 
                 <div class="result-card" style="margin-top: 25px;">
-                    <h3>📈 Pollution Breakdown</h3>
+                    <h3>Pollution Breakdown</h3>
                     <div class="chart-container">
                         <canvas id="pollutionChart"></canvas>
                     </div>
