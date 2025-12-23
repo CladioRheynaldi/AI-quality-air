@@ -118,17 +118,20 @@ class TreePredictionAI:
         
         total_load_grams, U_used, Q_calculated = self.calculate_pollution_load(dominant_value, area_km2, wind_speed)
         
+        STREET_CANYON_FACTOR = 0.4
+        
         for species in self.species_database:
             absorption_rate = species['rates'].get(dominant_type, 0.1) 
             
             if absorption_rate <= 0:
                 absorption_rate = 0.1
                 
-            trees_needed = math.ceil(total_load_grams / absorption_rate)
+            raw_trees_needed = total_load_grams / absorption_rate
+            adjusted_trees_needed = math.ceil(raw_trees_needed * STREET_CANYON_FACTOR)
             
             results.append({
                 'species': species['name'],
-                'trees_needed': int(trees_needed),
+                'trees_needed': int(adjusted_trees_needed),
                 'absorption_rate': absorption_rate,
                 'pollutant_target': dominant_type.upper(),
                 'maintenance': species['maintenance'],
